@@ -1,0 +1,128 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+} */
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  background: #DCE35B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+:root
+{
+  --fs1:clamp(1.25rem,2vw,2rem);
+  --fs2:clamp(1rem,1.5vw,1.8rem);
+}
+.calculator
+{
+  min-width: 250px;
+  max-width: 350px;
+  width: 50vw;
+}
+.display
+{
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+.pad
+{
+  text-align: center;
+  display: grid;
+  /* border: 2px solid black; */
+  /* max-width: 400px; */
+  font-size: var(--fs1);
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  /* margin: auto; */
+  background: white;
+}
+
+.span-2
+{
+  width: 100%;
+  column-span: 2;
+  grid-column: span 2;
+}
+.digit
+{
+  padding: 1rem;
+  border: 1px solid rgb(182, 182, 182);
+}
+.digit:hover
+{
+cursor: pointer;
+background-color: whitesmoke;
+}
+
+.display
+{
+  min-height: 1px;
+  overflow: hidden;
+}
+.upperDisplay
+{
+  font-size: var(--fs2);
+  color: rgb(223, 223, 223);
+  text-align: right;
+  padding: 0.5rem 1rem;
+  min-height: 40%;
+}
+.MainDisplay
+{
+  text-align: right;
+  padding: 0.5rem 1rem;
+  font-size: var(--fs1);
+  min-height:60%;
+  width: 100%;
+  overflow: hidden;
+}
